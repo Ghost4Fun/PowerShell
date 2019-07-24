@@ -1,4 +1,4 @@
-#Simple PS script created by Ghost4Fun on 10.02.2019 requested by L'OrÈal Baltic
+#Simple PS script created by Ghost4Fun on 10.02.2019 requested by L'Or√©al Baltic
 Import-Module activedirectory #Import AD module 
   
 $ADUsers = Import-csv "C:\Temp\Baltics_users.csv" #Get data to import from csv fille  
@@ -33,7 +33,7 @@ $manager = $User.FirstNameManager + "." + $User.LastNameManager #creates users m
     $description = $country + " " + $dywizja + " " + $job  
     $atrybut3 = $User.COSTCENTER
  
-   Set-ADUser -server emea.loreal.intra  -Identity $ziomek1 -division $dywizja -country $country -Manager $manaer -Description $description -Company "L'OrÈal Baltic SIA" -Replace @{info="Account verified on 10.02.2019î} -Clear HomeDirectory
+   Set-ADUser -server emea.loreal.intra  -Identity $ziomek1 -division $dywizja -country $country -Manager $manaer -Description $description -Company "L'Or√©al Baltic SIA" -Replace @{info="Account verified on 10.02.2019‚Äù} -Clear HomeDirectory
     }  #The main script with put whole data into AD
 
 
